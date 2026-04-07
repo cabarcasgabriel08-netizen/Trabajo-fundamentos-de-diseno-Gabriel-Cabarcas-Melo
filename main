@@ -1,0 +1,21 @@
+
+package hospital;
+
+import java.time.LocalDate;
+
+public class Main {
+    public static void main(String[] args) {
+        Hospital miHospital = new Hospital();
+
+        Paciente p1 = new Paciente(101, "Juan Perez", 45, "Masculino", "Leucemia", 2, "Tratamiento");
+        
+        Examen e1 = new Examen(1, LocalDate.now(), "Sangre", "Positivo");
+
+        miHospital.registrarPaciente(p1);
+        miHospital.agregarExamen(p1, e1);
+
+        miHospital.buscarPaciente(101);
+        
+        miHospital.numeroPacientesPorTipoCancer();
+    }
+}
